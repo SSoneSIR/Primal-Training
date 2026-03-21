@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+	--background: #f7f3ea;
+	--foreground: #1d140d;
+	--card: #fffaf1;
+	--card-foreground: #2a1b12;
+	--muted: #ede2d2;
+	--muted-foreground: #5f4b3d;
+	--border: #d8c3ab;
+	--accent: #b6542f;
+	--accent-foreground: #fff5ed;
+	--accent-soft: #f2d2b7;
+	--shadow: rgba(60, 28, 12, 0.12);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: radial-gradient(
+		circle at top,
+		#fef7ed 0%,
+		#f3e7d4 45%,
+		#ead9c1 100%
+	);
+	color: var(--foreground);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background:
+		radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.6), transparent 25%),
+		linear-gradient(180deg, rgba(255, 255, 255, 0.25), transparent 40%);
+	font-family: Georgia, "Times New Roman", serif;
+}
+
+a {
+	color: inherit;
+}
+
+.grain {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.06;
+	background-image:
+		linear-gradient(
+			120deg,
+			transparent 0%,
+			rgba(0, 0, 0, 0.8) 50%,
+			transparent 100%
+		),
+		linear-gradient(
+			45deg,
+			rgba(0, 0, 0, 0.9) 25%,
+			transparent 25%,
+			transparent 50%,
+			rgba(0, 0, 0, 0.9) 50%,
+			rgba(0, 0, 0, 0.9) 75%,
+			transparent 75%,
+			transparent
+		);
+	background-size:
+		280px 280px,
+		6px 6px;
+}

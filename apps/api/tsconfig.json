@@ -1,0 +1,29 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"composite": true,
+		"outDir": "dist",
+		"baseUrl": ".",
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
+		"incremental": true,
+		"removeComments": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"strictNullChecks": false,
+		"noImplicitAny": false,
+		"strictBindCallApply": false,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"verbatimModuleSyntax": false,
+		"types": ["node"],
+		"paths": {
+			"@/*": ["./src/*"]
+		}
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist"]
+}

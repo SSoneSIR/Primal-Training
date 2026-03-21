@@ -1,0 +1,50 @@
+{
+	"name": "@primal-training/db",
+	"version": "0.1.0",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./*": {
+			"types": "./dist/*.d.ts",
+			"import": "./dist/*.js",
+			"require": "./dist/*.js",
+			"default": "./dist/*.js"
+		}
+	},
+	"scripts": {
+		"build": "tsdown",
+		"check-types": "tsc --project tsconfig.json --noEmit",
+		"db:push": "drizzle-kit push",
+		"db:studio": "drizzle-kit studio",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:seed": "tsx src/seed.ts",
+		"db:start": "docker compose up -d",
+		"db:watch": "docker compose up",
+		"db:stop": "docker compose stop",
+		"db:down": "docker compose down"
+	},
+	"dependencies": {
+		"dotenv": "catalog:",
+		"drizzle-orm": "^0.44.7",
+		"pg": "^8.14.1",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"@types/pg": "^8.11.11",
+		"drizzle-kit": "^0.31.2",
+		"tsx": "^4.19.2",
+		"tsdown": "catalog:",
+		"typescript": "catalog:"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}

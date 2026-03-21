@@ -1,0 +1,33 @@
+{
+	"name": "@primal-training/storage",
+	"version": "0.1.0",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsdown",
+		"check-types": "tsc --project tsconfig.json --noEmit"
+	},
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.731.1",
+		"@aws-sdk/s3-request-presigner": "^3.731.1",
+		"@supabase/supabase-js": "^2.48.0",
+		"sharp": "^0.34.5",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"tsdown": "catalog:",
+		"typescript": "catalog:"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
