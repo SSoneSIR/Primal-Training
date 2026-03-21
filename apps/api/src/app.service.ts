@@ -16,7 +16,7 @@ export class AppService {
 			status: "ok",
 			docs: "/api",
 			client: "http://localhost:3000",
-			database: "postgresql://postgres:password@localhost:5432/primal_training",
+			database: "configured via DATABASE_URL",
 		};
 	}
 }

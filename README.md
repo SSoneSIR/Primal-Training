@@ -2,6 +2,22 @@
 
 A modern full-stack TypeScript monorepo for Primal Training, built with Next.js, NestJS, Drizzle ORM, PostgreSQL, Turborepo, and pnpm workspaces. The repository is set up to run locally or inside GitHub Codespaces with the same Bullhouse-style developer workflow.
 
+## Quick Start For Juniors
+
+From the repo root:
+
+```bash
+pnpm setup
+pnpm repo:doctor
+pnpm db:push
+pnpm dev
+```
+
+Read these first:
+
+- `docs/START-HERE.md`
+- `docs/BUILDING-GUIDE.md`
+
 ## Table of Contents
 
 - [Features](#features)
@@ -133,6 +149,12 @@ Install dependencies for the whole monorepo:
 
 ```bash
 pnpm install
+```
+
+If you want the fastest setup path instead of doing the steps manually:
+
+```bash
+pnpm setup
 ```
 
 ### 3. Set Up Environment Variables
@@ -314,6 +336,8 @@ pnpm start
 
 | Script | Description |
 |--------|-------------|
+| `pnpm setup` | Install dependencies, create `apps/api/.env` if needed, and print next steps |
+| `pnpm repo:doctor` | Check env setup, database connectivity, Docker status, and local app status |
 | `pnpm dev` | Run all app dev processes |
 | `pnpm build` | Build all apps and packages |
 | `pnpm start` | Run package start scripts |
@@ -330,6 +354,11 @@ pnpm start
 | `pnpm db:generate` | Generate migrations |
 | `pnpm db:migrate` | Apply migrations |
 | `pnpm db:seed` | Run the DB seed script |
+
+## Extra Docs
+
+- `docs/START-HERE.md` for first-time contributors
+- `docs/BUILDING-GUIDE.md` for feature work conventions
 
 ## Development Workflow
 
