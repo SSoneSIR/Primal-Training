@@ -14,12 +14,12 @@ export default function TitleTextCard({
 }: TitleTextCardProps) {
   return (
     <div className={`flex min-w-0 flex-1 flex-col p-6 ${className}`}>
-      <div className="text-4xl font-bold">
+      <div className=" text-2xl sm:text-4xl font-bold">
         {titleLines.map((line) => (
           <p key={line}>{line}</p>
         ))}
       </div>
-      <div className="mt-50 w-full p-2 text-base font-normal text-foreground">
+      <div className="mt-2 sm:mt-50 w-full text-base font-normal text-foreground">
         <p className="leading-relaxed">{description}</p>
       </div>
       {children ? <div className="mt-4">{children}</div> : null}

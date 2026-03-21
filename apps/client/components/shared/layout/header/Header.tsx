@@ -35,7 +35,7 @@ export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-muted-foreground border-b-2">
+    <header className="sticky top-0 z-50 border-b-2 bg-muted-foreground ">
       <div className="flex items-center justify-between p-6">
         <div className="flex cursor-pointer gap-2 hover:text-gray-700">
           <Image
