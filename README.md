@@ -2,7 +2,7 @@
 
 A modern full-stack TypeScript monorepo for Primal Training, built with Next.js, NestJS, Drizzle ORM, PostgreSQL, Turborepo, and pnpm workspaces. The repository is set up to run locally or inside GitHub Codespaces with the same Bullhouse-style developer workflow.
 
-## Quick Start For Juniors
+## Quick Start
 
 From the repo root:
 
