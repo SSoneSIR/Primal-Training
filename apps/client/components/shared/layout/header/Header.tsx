@@ -73,9 +73,9 @@ export default function Header() {
             showMenu ? "translate-y-0" : "-translate-y-2"
           }`}
         >
-          <p className="border-t-2 py-5 px-18 text-2xl">HOME</p>
-          <p className="border-t-2 py-5 px-18 text-2xl">ABOUT US</p>
-          <p className="border-t-2 border bg-accent py-5 px-18 text-2xl">
+          <p className="border-t-2 py-5 px-18 text-sm">HOME</p>
+          <p className="border-t-2 py-5 px-18 text-sm">ABOUT US</p>
+          <p className="border-t-2 border bg-accent py-5 px-18 text-sm">
             RESERVE YOUR SPOT
           </p>
         </div>
