@@ -9,8 +9,10 @@ export default function Footer() {
             src="/Vector.png"
             alt="Primal Training logo"
             width={200}
-            height={200}
-            className="aspect-video"
+            height={119}
+            sizes="200px"
+            loading="eager"
+            className="h-auto w-[200px]"
           />
           <p className="mt-8 text-5xl font-semibold sm:mt-0 ">PrimalTraining</p>
         </div>
@@ -20,8 +22,18 @@ export default function Footer() {
         <div>
           Contact
           <div className="font-semibold text-sm mt-4">
-            <p>Email:hello@figma.com</p>
-            <p>Phone: +977 123456789 </p>
+            <p>
+              Email:{" "}
+              <a className="underline underline-offset-4" href="mailto:hello@figma.com">
+                hello@figma.com
+              </a>
+            </p>
+            <p>
+              Phone:{" "}
+              <a className="underline underline-offset-4" href="tel:+977123456789">
+                +977 123456789
+              </a>
+            </p>
           </div>
         </div>
         <div>

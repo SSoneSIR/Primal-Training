@@ -1,6 +1,8 @@
 import Image from "next/image";
+
 import Header from "../../components/shared/layout/header";
 import Footer from "../../components/shared/layout/footer";
+import TitleTextCard from "../../components/shared/card/title-text-card";
 
 export default function HomePage() {
   return (
@@ -20,51 +22,29 @@ export default function HomePage() {
           height={400}
           className="object-fill"
         />
-        <div className="flex min-w-0 flex-1 flex-col p-6 bg-muted-foreground">
-          <div className="text-4xl font-bold">
-            <p>FOR THE</p> <p>COMMITTED</p>
-          </div>
-
-          <div className="mt-50 w-full p-2 text-base font-normal text-foreground">
-            <p className="leading-relaxed">
-              Train like an athlete with top-tier equipment and expert
-              programming. Whether you're building muscle or breaking PRs, we
-              help you push past limits.
-            </p>
-          </div>
-          <div className=" mt-4 text-sm text-foreground font-semibold w-fit rounded-2xl p-3 hover:bg-gray-900 hover:text-gray-100 cursor-pointer">
-            {" "}
-            ABOUT US{" "}
-          </div>
-        </div>
+        <TitleTextCard
+          titleLines={["FOR THE", "COMMITTED"]}
+          description="Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits."
+          className="bg-muted-foreground"
+        >
+          <button
+            type="button"
+            className="w-fit cursor-pointer rounded-2xl p-3 text-sm font-semibold text-foreground hover:bg-gray-900 hover:text-gray-100"
+          >
+            ABOUT US
+          </button>
+        </TitleTextCard>
       </div>
       <div className="flex border-b bg-muted-foreground">
-        <div className="flex min-w-0 flex-1 flex-col p-6 border-r">
-          <div className="text-4xl font-bold">
-            <p>GUIDED BY</p> <p>EXPERTS</p>
-          </div>
-
-          <div className="mt-50 w-full p-2 text-base font-normal text-foreground">
-            <p className="leading-relaxed">
-              Train like an athlete with top-tier equipment and expert
-              programming. Whether you're building muscle or breaking PRs, we
-              help you push past limits.
-            </p>
-          </div>
-        </div>
-        <div className="flex min-w-0 flex-1 flex-col p-6 ">
-          <div className="text-4xl font-bold">
-            <p>DYNAMIC OPEN</p> <p>GYM</p>
-          </div>
-
-          <div className="mt-50 w-full p-2 text-base font-normal text-foreground">
-            <p className="leading-relaxed">
-              Our facility is the optimal environment for strength training and
-              performance, fully equipped with top-of-the-line tools, ample
-              training areas, and a focus on functional movement.
-            </p>
-          </div>
-        </div>
+        <TitleTextCard
+          titleLines={["GUIDED BY", "EXPERTS"]}
+          description="Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits."
+          className="border-r"
+        />
+        <TitleTextCard
+          titleLines={["DYNAMIC OPEN", "GYM"]}
+          description="Our facility is the optimal environment for strength training and performance, fully equipped with top-of-the-line tools, ample training areas, and a focus on functional movement."
+        />
         <Image
           src="/Image-2.png"
           alt="Primal Training logo"
@@ -100,9 +80,12 @@ export default function HomePage() {
               <p>A community that pushes you to be your best.</p>
             </div>
             <div className="flex flex-col px-6  py-8 ">
-              <div className="text-xs text-foreground font-semibold w-fit rounded-2xl p-3 hover:bg-gray-900 hover:text-gray-100 cursor-pointer">
+              <button
+                type="button"
+                className="w-fit cursor-pointer rounded-2xl p-3 text-xs font-semibold text-foreground hover:bg-gray-900 hover:text-gray-100"
+              >
                 VIEW CLASSES
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -118,9 +101,12 @@ export default function HomePage() {
       <div className="flex  flex-col gap-6  p-40 text-center bg-accent">
         <p className="text-lg leading-tight">WHAT WE BELIEVE IN</p>
         <p className="text-6xl font-bold">JOIN PRIMAL TRIBE TODAY!</p>
-        <p className="mx-auto mt-2 w-fit rounded-2xl bg-background p-3 hover:bg-foreground hover:text-background cursor-pointer">
+        <button
+          type="button"
+          className="mx-auto mt-2 w-fit cursor-pointer rounded-2xl bg-background p-3 hover:bg-foreground hover:text-background"
+        >
           RESERVE YOUR SPOT
-        </p>
+        </button>
       </div>
       <Footer />
     </div>
