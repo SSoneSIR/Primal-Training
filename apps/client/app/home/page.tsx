@@ -10,7 +10,7 @@ export default function HomePage() {
     <div>
       <Header />
       <div className="border-b-2 px-1 pt-4 pb-0">
-        <div className="mb-4 flex flex-nowrap whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight">
+        <div className="mb-4 flex flex-nowrap whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight md:text-6xl lg:text-8xl">
           <p>TRAIN HARD.</p>
           <p className="text-accent">LIVE BETTER</p>
         </div>
@@ -22,7 +22,7 @@ export default function HomePage() {
           width={900}
           height={400}
           priority
-          className="h-auto w-full object-cover sm:h-128 sm:w-225 sm:object-fill"
+          className="h-auto w-full object-cover sm:h-128 sm:w-225 sm:object-fill md:h-auto md:w-140 md:object-cover lg:h-128 lg:w-225 lg:object-fill"
         />
         <TitleTextCard
           titleLines={["FOR THE", "COMMITTED"]}
@@ -53,19 +53,19 @@ export default function HomePage() {
           alt="Primal Training logo"
           width={380}
           height={479}
-          className="order-1 w-full object-cover sm:order-3 sm:mx-0 sm:w-95 sm:max-w-none sm:shrink-0 sm:object-fill"
+          className="order-1 w-full object-cover sm:order-3 sm:mx-0 sm:w-95 sm:max-w-none sm:shrink-0 sm:object-fill md:w-72 md:object-cover lg:w-95 lg:object-fill"
         />{" "}
       </div>
       <div className="border-b sm:p-3 py-2 px-6">
-        <div className=" flex gap-4 whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight ">
+        <div className=" flex gap-4 whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight md:text-6xl lg:text-8xl ">
           <p>JOIN THE</p>
           <p className="text-accent">COMMUNITY</p>
         </div>
       </div>
       <div className="flex flex-col border-b sm:flex-row sm:items-stretch">
-        <div className="order-2 w-full bg-muted-foreground sm:order-1 sm:min-w-0 sm:w-115">
+        <div className="order-2 w-full bg-muted-foreground sm:order-1 sm:min-w-0 sm:w-115 md:w-90 lg:w-115">
           <div className="flex flex-col px-6 border-b ">
-            <div className="text-2xl sm:text-3xl font-bold py-4 sm:py-8">
+            <div className="py-4 text-2xl font-bold sm:py-8 sm:text-3xl md:text-2xl lg:text-3xl">
               <p>DISCOVER YOUR POTENTIAL</p>
             </div>
           </div>
@@ -102,11 +102,11 @@ export default function HomePage() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center gap-2 sm:gap-6 bg-accent px-2 py-20 text-center sm:p-40">
+      <div className="flex flex-col items-center gap-2 bg-accent px-2 py-20 text-center sm:gap-6 sm:p-40 md:px-12 md:py-24 lg:p-40">
         <p className="text-base leading-loose font-semibold sm:text-lg">
           WHAT WE BELIEVE IN
         </p>
-        <p className="text-3xl font-bold leading-none sm:max-w-none sm:text-6xl">
+        <p className="text-3xl font-bold leading-none sm:max-w-none sm:text-6xl md:max-w-3xl md:text-5xl lg:max-w-none lg:text-6xl">
           <span>JOIN THE PRIMAL</span>
           <span className="block sm:ml-3 sm:inline">TRIBE TODAY!</span>
         </p>
