@@ -7,22 +7,22 @@ import TitleTextCard2 from "../../components/shared/card/title-text-card2";
 
 export default function HomePage() {
   return (
-    <div>
+    <main>
       <Header />
       <div className="border-b-2 px-1 pt-4 pb-0">
-        <div className="mb-4 flex flex-nowrap whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight md:text-6xl lg:text-8xl">
-          <p>TRAIN HARD.</p>
-          <p className="text-accent">LIVE BETTER</p>
+        <div className="mb-4 flex  text-3xl font-bold leading-loose sm:flex-nowrap sm:justify-center sm:text-8xl sm:leading-tight sm:whitespace-nowrap md:text-6xl lg:text-8xl">
+          <h1 className="whitespace-nowrap">TRAIN HARD.</h1>
+          <h1 className="whitespace-nowrap text-accent">LIVE BETTER</h1>
         </div>
-      </div>{" "}
-      <div className="flex flex-col sm:flex-row">
+      </div>
+      <section id="about" className="flex flex-col sm:flex-row">
         <Image
           src="/image.png"
           alt="Primal Training logo"
           width={900}
           height={400}
           priority
-          className="h-auto w-full object-cover sm:h-128 sm:w-225 sm:object-fill md:h-auto md:w-140 md:object-cover lg:h-128 lg:w-225 lg:object-fill"
+          className="h-auto w-full object-cover sm:h-128 sm:w-225 md:h-auto md:w-140 lg:h-128 lg:w-225"
         />
         <TitleTextCard
           titleLines={["FOR THE", "COMMITTED"]}
@@ -36,8 +36,8 @@ export default function HomePage() {
             ABOUT US
           </button>
         </TitleTextCard>
-      </div>
-      <div className="flex flex-col border-b bg-muted-foreground sm:flex-row">
+      </section>
+      <section className="flex flex-col border-b bg-muted-foreground sm:flex-row">
         <TitleTextCard
           titleLines={["GUIDED BY", "EXPERTS"]}
           description="Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits."
@@ -53,16 +53,16 @@ export default function HomePage() {
           alt="Primal Training logo"
           width={380}
           height={479}
-          className="order-1 w-full object-cover sm:order-3 sm:mx-0 sm:w-95 sm:max-w-none sm:shrink-0 sm:object-fill md:w-72 md:object-cover lg:w-95 lg:object-fill"
-        />{" "}
-      </div>
+          className="order-1 w-full object-cover sm:order-3 sm:mx-0 sm:w-95 sm:max-w-none sm:shrink-0 md:w-72 lg:w-95"
+        />
+      </section>
       <div className="border-b sm:p-3 py-2 px-6">
-        <div className=" flex gap-4 whitespace-nowrap text-3xl font-bold leading-loose sm:justify-center sm:text-8xl sm:leading-tight md:text-6xl lg:text-8xl ">
-          <p>JOIN THE</p>
-          <p className="text-accent">COMMUNITY</p>
+        <div className="flex gap-3 text-3xl font-bold leading-loose sm:flex-nowrap sm:justify-center sm:text-8xl sm:leading-tight sm:whitespace-nowrap md:text-6xl lg:text-8xl">
+          <h1 className="whitespace-nowrap">JOIN THE</h1>
+          <h1 className="whitespace-nowrap text-accent">COMMUNITY</h1>
         </div>
       </div>
-      <div className="flex flex-col border-b sm:flex-row sm:items-stretch">
+      <section className="flex flex-col border-b sm:flex-row sm:items-stretch">
         <div className="order-2 w-full bg-muted-foreground sm:order-1 sm:min-w-0 sm:w-115 md:w-90 lg:w-115">
           <div className="flex flex-col px-6 border-b ">
             <div className="py-4 text-2xl font-bold sm:py-8 sm:text-3xl md:text-2xl lg:text-3xl">
@@ -101,23 +101,26 @@ export default function HomePage() {
             className="object-cover"
           />
         </div>
-      </div>
-      <div className="flex flex-col items-center gap-2 bg-accent px-2 py-20 text-center sm:gap-6 sm:p-40 md:px-12 md:py-24 lg:p-40">
-        <p className="text-base leading-loose font-semibold sm:text-lg">
+      </section>
+      <section
+        id="reserve"
+        className="flex flex-col items-center gap-2 bg-accent px-2 py-20 text-center sm:gap-6 sm:p-40 md:px-12 md:py-24 lg:p-40"
+      >
+        <h1 className="text-base leading-loose font-semibold sm:text-lg">
           WHAT WE BELIEVE IN
-        </p>
-        <p className="text-3xl font-bold leading-none sm:max-w-none sm:text-6xl md:max-w-3xl md:text-5xl lg:max-w-none lg:text-6xl">
+        </h1>
+        <h1 className="text-3xl font-bold leading-none sm:max-w-none sm:text-6xl md:max-w-3xl md:text-5xl lg:max-w-none lg:text-6xl">
           <span>JOIN THE PRIMAL</span>
           <span className="block sm:ml-3 sm:inline">TRIBE TODAY!</span>
-        </p>
+        </h1>
         <button
           type="button"
           className="mx-auto mt-2 w-fit cursor-pointer rounded-2xl bg-background p-2 sm:p-3 hover:bg-foreground hover:text-background"
         >
           RESERVE YOUR SPOT
         </button>
-      </div>
+      </section>
       <Footer />
-    </div>
+    </main>
   );
 }
