@@ -45,7 +45,7 @@ export default function Header() {
         <Link href="/home" className="flex gap-2 hover:text-gray-700">
           <Image
             src="/Vector.png"
-            alt="Primal Training logo"
+            alt="Primal Training brand logo"
             width={44}
             height={26}
           />

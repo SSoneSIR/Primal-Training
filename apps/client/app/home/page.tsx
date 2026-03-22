@@ -15,7 +15,7 @@ export default function HomePage() {
       <section id="about" className="flex flex-col sm:flex-row">
         <Image
           src="/image.png"
-          alt="Primal Training logo"
+          alt="Athletes performing box squats in a sunlit gym"
           width={900}
           height={400}
           className="h-auto w-full object-cover sm:h-128 sm:w-225 md:h-auto md:w-140 lg:h-128 lg:w-225"
@@ -46,7 +46,7 @@ export default function HomePage() {
         />
         <Image
           src="/Image-2.png"
-          alt="Primal Training logo"
+          alt="Athlete resting battle ropes across her shoulders in the gym"
           width={380}
           height={479}
           className="order-1 w-full object-cover sm:order-3 sm:mx-0 sm:w-95 sm:max-w-none sm:shrink-0 md:w-72 lg:w-95"
@@ -92,7 +92,7 @@ export default function HomePage() {
         <div className="relative order-1 min-h-80 w-full sm:order-2 sm:min-h-0 sm:flex-1">
           <Image
             src="/Image3.png"
-            alt="Primal Training logo"
+            alt="Group fitness class performing barbell squats"
             fill
             className="object-cover"
           />
