@@ -1,7 +1,57 @@
 import Image from "next/image";
 
+import Button from "../../components/ui/button";
 import TitleTextCard from "../../components/shared/card/title-text-card";
 import TitleTextCard2 from "../../components/shared/card/title-text-card2";
+
+const contentButtonClassName =
+  "w-fit cursor-pointer rounded-2xl p-3 text-sm font-semibold text-foreground hover:bg-gray-900 hover:text-gray-100";
+
+const homeHeroCards = [
+  {
+    key: "committed",
+    titleLines: ["FOR THE", "COMMITTED"],
+    description:
+      "Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits.",
+    className: "bg-muted-foreground border-b",
+    actionLabel: "ABOUT US",
+  },
+];
+
+const homeFeatureCards = [
+  {
+    key: "guided-by-experts",
+    titleLines: ["GUIDED BY", "EXPERTS"],
+    description:
+      "Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits.",
+    className: "order-2 border-b sm:order-1 sm:border-b-0 sm:border-r",
+  },
+  {
+    key: "dynamic-open-gym",
+    titleLines: ["DYNAMIC OPEN", "GYM"],
+    description:
+      "Our facility is the optimal environment for strength training and performance, fully equipped with top-of-the-line tools, ample training areas, and a focus on functional movement.",
+    className: "order-3 sm:order-2",
+  },
+];
+
+const homePotentialCards = [
+  {
+    key: "expert-coaching",
+    title: ["EXPERT COACHING"],
+    description: "Trainers who are passionate about your progress.",
+  },
+  {
+    key: "result-driven-programs",
+    title: ["RESULT-DRIVEN PROGRAMS"],
+    description: "Workouts that deliver tangible, measurable results.",
+  },
+  {
+    key: "supportive-tribe",
+    title: ["A SUPPORTIVE TRIBE"],
+    description: "A community that pushes you to be your best.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -20,30 +70,31 @@ export default function HomePage() {
           height={400}
           className="h-auto w-full object-cover sm:h-128 sm:w-225 md:h-auto md:w-140 lg:h-128 lg:w-225"
         />
-        <TitleTextCard
-          titleLines={["FOR THE", "COMMITTED"]}
-          description="Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits."
-          className="bg-muted-foreground border-b"
-        >
-          <button
-            type="button"
-            className="w-fit cursor-pointer rounded-2xl p-3 text-sm font-semibold text-foreground hover:bg-gray-900 hover:text-gray-100"
+
+        {homeHeroCards.map((card) => (
+          <TitleTextCard
+            key={card.key}
+            titleLines={card.titleLines}
+            description={card.description}
+            className={card.className}
           >
-            ABOUT US
-          </button>
-        </TitleTextCard>
+            {card.actionLabel ? (
+              <button type="button" className={contentButtonClassName}>
+                {card.actionLabel}
+              </button>
+            ) : null}
+          </TitleTextCard>
+        ))}
       </section>
       <section className="flex flex-col border-b bg-muted-foreground sm:flex-row">
-        <TitleTextCard
-          titleLines={["GUIDED BY", "EXPERTS"]}
-          description="Train like an athlete with top-tier equipment and expert programming. Whether you're building muscle or breaking PRs, we help you push past limits."
-          className="order-2 border-b sm:order-1 sm:border-b-0 sm:border-r"
-        />
-        <TitleTextCard
-          titleLines={["DYNAMIC OPEN", "GYM"]}
-          description="Our facility is the optimal environment for strength training and performance, fully equipped with top-of-the-line tools, ample training areas, and a focus on functional movement."
-          className="order-3 sm:order-2"
-        />
+        {homeFeatureCards.map((card) => (
+          <TitleTextCard
+            key={card.key}
+            titleLines={card.titleLines}
+            description={card.description}
+            className={card.className}
+          />
+        ))}
         <Image
           src="/Image-2.png"
           alt="Athlete resting battle ropes across her shoulders in the gym"
@@ -66,18 +117,13 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <TitleTextCard2
-              title={["EXPERT COACHING"]}
-              description="Trainers who are passionate about your progress."
-            />
-            <TitleTextCard2
-              title={["RESULT-DRIVEN PROGRAMS"]}
-              description="Workouts that deliver tangible, measurable results."
-            />
-            <TitleTextCard2
-              title={["A SUPPORTIVE TRIBE"]}
-              description="A community that pushes you to be your best."
-            />
+            {homePotentialCards.map((card) => (
+              <TitleTextCard2
+                key={card.key}
+                title={card.title}
+                description={card.description}
+              />
+            ))}
             <div className="flex flex-col px-6 py-8  items-center sm:items-start">
               <button
                 type="button"
@@ -109,12 +155,13 @@ export default function HomePage() {
           <span>JOIN THE PRIMAL</span>
           <span className="block sm:ml-3 sm:inline">TRIBE TODAY!</span>
         </h1>
-        <button
+        <Button
+          className="mx-auto mt-2 w-fit hover:bg-foreground hover:text-background"
           type="button"
-          className="mx-auto mt-2 w-fit cursor-pointer rounded-2xl bg-background p-2 sm:p-3 hover:bg-foreground hover:text-background"
+          variant="secondary"
         >
           RESERVE YOUR SPOT
-        </button>
+        </Button>
       </section>
     </main>
   );
