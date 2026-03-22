@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="sm:flex items-start sm:justify-between">
           <Image
             src="/Vector.png"
-            alt="Primal Training logo"
+            alt="Primal Training footer logo"
             width={200}
             height={119}
             sizes="200px"
