@@ -10,17 +10,25 @@ export default function TitleTextCard2({
   title,
   description,
   className = "",
+  children,
 }: TitleTextCard2Props) {
   return (
-    <div className={`flex flex-col border-b px-6 py-3 sm:px-6 sm:py-8 md:px-5 md:py-5 lg:px-6 lg:py-8 ${className}`}>
-      <div className="font-bold text-xl md:text-lg lg:text-xl">
+    <article
+      className={`flex h-full min-w-0 flex-col border-b px-8 py-6 sm:px-10 sm:py-8 ${className}`}
+    >
+      <h3 className="text-2xl font-bold leading-none sm:text-2xl">
         {title.map((line) => (
-          <p key={line}>{line}</p>
+          <span key={line} className="block">
+            {line}
+          </span>
         ))}
-      </div>
-      <div>
-        <p className="md:text-sm lg:text-base">{description}</p>
-      </div>
-    </div>
+      </h3>
+
+      <p className="mt-6 text-base leading-relaxed text-foreground sm:text-lg">
+        {description}
+      </p>
+
+      {children ? <div className="mt-auto pt-8">{children}</div> : null}
+    </article>
   );
 }

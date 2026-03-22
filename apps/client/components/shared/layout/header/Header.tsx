@@ -6,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import Button from "../../../ui/button";
+
 function PlusButton({
   controlsId,
   isOpen,
@@ -65,12 +67,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/home#reserve"
-                className="rounded-2xl bg-accent p-2 hover:text-gray-700"
+              <Button
+                href="/reserve"
+                className="hover:text-gray-700"
               >
                 RESERVE YOUR SPOT
-              </Link>
+              </Button>
             </li>
           </ul>
         </nav>
@@ -115,13 +117,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link
-              href="/home#reserve"
-              className="block border border-t-2 bg-accent px-18 py-5 text-sm"
+            <Button
+              href="/reserve"
+              className="mx-4 my-4 flex"
               onClick={() => setShowMenu(false)}
             >
               RESERVE YOUR SPOT
-            </Link>
+            </Button>
           </li>
         </ul>
       </nav>
