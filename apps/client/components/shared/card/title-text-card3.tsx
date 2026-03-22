@@ -17,9 +17,9 @@ export default function TitleTextCard3({
 }: TitleTextCard3Props) {
   return (
     <article
-      className={`flex h-full min-w-0 flex-col bg-muted-foreground px-8 py-8 sm:px-10 sm:py-10 ${className}`}
+      className={`flex h-full min-w-0 flex-col bg-muted-foreground px-8  py-8 sm:px-10 sm:py-10 ${className}`}
     >
-      <h2 className="text-4xl font-bold leading-none sm:text-5xl">
+      <h2 className="text-4xl font-bold leading-none lg:text-3xl md:text-2xl">
         {title.map((line) => (
           <span key={line} className="block">
             {line}
@@ -40,7 +40,7 @@ export default function TitleTextCard3({
       </p>
 
       <div className="mt-auto pt-14">
-        <Button className="w-full" type="button">
+        <Button className="w-full bg-accent" type="button">
           {buttonLabel}
         </Button>
       </div>
