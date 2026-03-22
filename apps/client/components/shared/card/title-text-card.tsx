@@ -4,12 +4,14 @@ type TitleTextCardProps = {
   titleLines: string[];
   description: string;
   className?: string;
+  descriptionTop?: ReactNode;
   children?: ReactNode;
 };
 export default function TitleTextCard({
   titleLines,
   description,
   className = "",
+  descriptionTop,
   children,
 }: TitleTextCardProps) {
   return (
@@ -20,6 +22,7 @@ export default function TitleTextCard({
         ))}
       </div>
       <div className="mt-2 sm:mt-50 md:mt-8 lg:mt-50 w-full text-base font-normal text-foreground">
+        {descriptionTop ? <div className="mb-4">{descriptionTop}</div> : null}
         <p className="leading-relaxed">{description}</p>
       </div>
       {children ? <div className="mt-4">{children}</div> : null}

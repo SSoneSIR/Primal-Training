@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import {
-  Archivo,
-  Barlow_Condensed,
-  Geist_Mono,
-} from "next/font/google";
+import { Archivo, Barlow_Condensed, Geist_Mono } from "next/font/google";
 import type { ReactNode } from "react";
+import Header from "../components/shared/layout/header";
+import Footer from "../components/shared/layout/footer";
 
 import "./globals.css";
 
@@ -41,9 +39,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.variable} ${headingFont.variable} ${monoFont.variable} mx-auto max-w-7xl`}
+        className={`${bodyFont.variable} ${headingFont.variable} ${monoFont.variable} mx-auto flex min-h-screen max-w-7xl flex-col`}
       >
-        {children}
+        <Header />
+        <div className="flex-2">{children}</div>
+        <Footer />
       </body>
     </html>
   );

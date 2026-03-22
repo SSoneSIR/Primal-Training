@@ -1,14 +1,11 @@
 import Image from "next/image";
 
-import Header from "../../components/shared/layout/header";
-import Footer from "../../components/shared/layout/footer";
 import TitleTextCard from "../../components/shared/card/title-text-card";
 import TitleTextCard2 from "../../components/shared/card/title-text-card2";
 
 export default function HomePage() {
   return (
     <main>
-      <Header />
       <div className="border-b-2 px-1 pt-4 pb-0">
         <div className="mb-4 flex  text-3xl font-bold leading-loose sm:flex-nowrap sm:justify-center sm:text-8xl sm:leading-tight sm:whitespace-nowrap md:text-6xl lg:text-8xl">
           <h1 className="whitespace-nowrap">TRAIN HARD.</h1>
@@ -21,7 +18,6 @@ export default function HomePage() {
           alt="Primal Training logo"
           width={900}
           height={400}
-          priority
           className="h-auto w-full object-cover sm:h-128 sm:w-225 md:h-auto md:w-140 lg:h-128 lg:w-225"
         />
         <TitleTextCard
@@ -120,7 +116,6 @@ export default function HomePage() {
           RESERVE YOUR SPOT
         </button>
       </section>
-      <Footer />
     </main>
   );
 }
